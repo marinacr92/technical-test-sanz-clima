@@ -1,5 +1,6 @@
-// import '../styles/History.scss';
 import HistoryModel from "@/models/HistoryModel";
+
+import '@/styles/History.scss';
 
 const History = ({ history }: { history: HistoryModel[]}) => {
   return (

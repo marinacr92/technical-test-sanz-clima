@@ -1,4 +1,4 @@
-//import '../styles/Calculator.scss';
+import '@/styles/Calculator.scss'
 
 const Calculator = ({ result }: { result: number }) => {
   return (

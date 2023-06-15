@@ -1,0 +1,66 @@
+.main__form{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    border: 0.5rem solid #50808E;
+    margin: 0 0.5rem 0.5rem 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 3rem 0.5rem;
+}
+
+
+.form{
+    grid-column: 1/4;
+    grid-row: 1/2;
+
+    &__fieldset {
+        border: none;
+        padding-top: 1rem;
+    }
+}
+
+.fieldset{
+
+    &__title{
+        font-size: 1.8rem;  
+        margin-top: 1rem;    
+    }
+
+    &__inputs{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+        gap: 1rem;
+    }
+}
+
+.btn{
+    font-size: 1.3rem;
+    margin: 0 0.5rem;
+    border: none ;
+    color: white;
+    border-radius: 0.5rem;
+    max-width: 25rem;
+
+    &__add{
+        background-color: #50808E;
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    &__result{
+        background-color: #84B59F;
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+
+    &__reset{
+        background-color: #b6b2a3;
+        grid-column: 3/4;
+        grid-row: 2/3;
+    }
+}
+
+
+
+
+

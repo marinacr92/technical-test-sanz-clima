@@ -1,6 +1,6 @@
-// import '../styles/Input.scss';
-
 import InputModel from '@/models/InputModel'
+
+import '@/styles/Input.scss';
 
 const Input = ({
     value,

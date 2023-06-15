@@ -1,5 +1,4 @@
 'use client';
-// import styles from './page.module.css'
 import { useState } from 'react';
 
 import Form from './Form';
@@ -7,6 +6,8 @@ import Calculator from './Calculator';
 import History from './History';
 
 import HistoryModel from '@/models/HistoryModel'
+
+import '@/styles/Home.scss'
 
 
 export default function Home() {

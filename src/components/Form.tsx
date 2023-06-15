@@ -1,7 +1,7 @@
 import Input from './Input';
-// import '../styles/Form.scss';
 import FormModel from '@/models/FormModel'
 
+import '@/styles/Form.scss';
 
 const Form = ({
   saveValues,

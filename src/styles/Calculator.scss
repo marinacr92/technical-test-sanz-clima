@@ -1,0 +1,14 @@
+.main__result {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    border: 0.5rem solid #84B59F;
+    margin: 0 0.5rem 0.5rem 0.5rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.result__title{
+    font-size: 1.4rem;
+}
