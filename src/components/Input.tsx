@@ -1,11 +1,6 @@
 // import '../styles/Input.scss';
 
-interface InputModel {
-    value: number,
-    index: number,
-    saveValues: (value: number, index: number) => void,
-    deleteInput: (index: number) => void,
-}
+import InputModel from '@/models/InputModel'
 
 const Input = ({
     value,

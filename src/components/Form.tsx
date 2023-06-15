@@ -1,14 +1,7 @@
 import Input from './Input';
 // import '../styles/Form.scss';
+import FormModel from '@/models/FormModel'
 
-interface FormModel {
-  values: number[],
-  saveValues: (value: number, index: number) => void,
-  addNewInput: () => void,
-  deleteInput: (index: number) => void,
-  resetValues: () => void,
-  calculate: () => void,
-}
 
 const Form = ({
   saveValues,
