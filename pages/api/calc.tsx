@@ -18,7 +18,7 @@ const saveData = async (values: number[], result: number) => {
         console.error('Error:', err)
     }
     data.push({ values, result });
-    fileUtils.writeToFile('./db.json', JSON.stringify(data))
+    await fileUtils.writeToFile('./db.json', JSON.stringify(data))
     console.log('data', data)
 }
 

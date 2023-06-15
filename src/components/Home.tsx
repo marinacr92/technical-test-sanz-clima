@@ -1,9 +1,11 @@
 'use client';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import Form from './Form';
 import Calculator from './Calculator';
 import History from './History';
+
+import BackendService from '@/services/BackendService';
 
 import HistoryModel from '@/models/HistoryModel'
 
@@ -14,6 +16,16 @@ export default function Home() {
   const [values, setValues] = useState<number[]>([0]);
   const [result, setResult] = useState<number>(0);
   const [history, setHistory] = useState<HistoryModel[]>([]);
+
+  useEffect(() => {
+    const asyncFetch = async () => {
+      const result = await BackendService.getHistory();
+      if (result && result.history) {
+        setHistory(result.history)
+      }
+    }
+    asyncFetch()
+  }, [])
 
   const saveValues = (value: number, index: number) => {
     const array: number[] = [...values];
@@ -36,13 +48,11 @@ export default function Home() {
     }
   };
 
-  const calculate = () => {
-    const sum = values.reduce((accumulator, currentValue) => {
-      return accumulator + currentValue;
-    }, 0);
-    setResult(sum);
+  const calculate = async () => {
+    const calc = await BackendService.postCalculate(values);
+    setResult(calc.result);
     const newHistory: HistoryModel[] = [...history]
-    const data: HistoryModel = { values: values, result: sum };
+    const data: HistoryModel = { values, result: calc.result };
     newHistory.push(data)
     setHistory(newHistory);
   };
