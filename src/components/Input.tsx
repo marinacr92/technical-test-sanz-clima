@@ -1,6 +1,12 @@
 import InputModel from '@/models/InputModel'
 
 import '@/styles/Input.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+import { faCircleXmark } from '@fortawesome/free-solid-svg-icons';
+
+library.add(fas, faCircleXmark)
 
 const Input = ({
     value,
@@ -17,12 +23,11 @@ const Input = ({
         onChange={(ev) => saveValues(parseFloat(ev.target.value), index)}
         value={value}
       />
-
-      <i
-        className="fa-solid fa-circle-xmark"
+      <FontAwesomeIcon
+        icon={['fas', 'circle-xmark']}
         id={`${index}`}
-        onClick={() => deleteInput(index)}
-      ></i>
+        onClick={() => deleteInput(index)} />
+      
     </label>
   );
 };
