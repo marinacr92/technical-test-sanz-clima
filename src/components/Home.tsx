@@ -65,7 +65,7 @@ export default function Home() {
   return (
     <>
       <header className="header">
-        <h1>¿Sumamos?</h1>
+        <h1 className='header__title'>¿SUMAMOS?</h1>
       </header>
       <main className="main">
         <Form

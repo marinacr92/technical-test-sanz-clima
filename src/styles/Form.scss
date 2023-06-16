@@ -2,12 +2,12 @@
     grid-column: 1/2;
     grid-row: 1/2;
     border: 0.5rem solid #50808E;
-    margin: 0 0.5rem 0.5rem 0.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 3rem 0.5rem;
 }
-
 
 .form{
     grid-column: 1/4;
@@ -40,6 +40,7 @@
     color: white;
     border-radius: 0.5rem;
     max-width: 25rem;
+    cursor: pointer;
 
     &__add{
         background-color: #50808E;
